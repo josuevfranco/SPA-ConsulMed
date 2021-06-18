@@ -1,0 +1,71 @@
+<div class="fondo">
+    <br><br>
+    <div class="formulario container" style="width: 30%;">
+        <div class="container-fluid">
+            <br>
+            <h2>Registro de Doctor y Enfermera</h2>
+            <form (submit)="submit()" [formGroup]="registerForm">
+                <div class="form-group">
+                    <label for="nombre">Nombre</label>
+                    <input type="text" [(ngModel)]="medico.nombre" class="form-control" formControlName="nombre" required>
+
+                    <div>
+                        <div *ngIf="nombre.valid">&#x2714;</div>
+                        <div class="red" *ngIf="nombre.invalid && (nombre.dirty || nombre.touched)">&#x2718;</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="apellidos">Apellidos</label>
+                    <input type="text" [(ngModel)]="medico.apellido" class="form-control" formControlName="apellidos" required>
+
+                    <div>
+                        <div *ngIf="apellidos.valid">&#x2714;</div>
+                        <div class="red" *ngIf="apellidos.invalid && (apellidos.dirty || apellidos.touched)">&#x2718;</div>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="profesion">Profesión</label>
+                    <input type="text" [(ngModel)]="medico.especialidad" class="form-control" formControlName="profesion" required>
+
+                    <div>
+                        <div *ngIf="profesion.valid">&#x2714;</div>
+                        <div class="red" *ngIf="profesion.invalid && (profesion.dirty || profesion.touched)">&#x2718;</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="correo">Correo electrónico</label>
+                    <input type="email" [(ngModel)]="medico.correo" class="form-control" formControlName="correo" required>
+
+                    <div>
+                        <div *ngIf="correo.valid">&#x2714;</div>
+                        <div class="red" *ngIf="correo.invalid && (correo.dirty || correo.touched)">&#x2718;</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contrasena">Contraseña</label>
+                    <input type="password" [(ngModel)]="medico.contrasena" class="form-control" formControlName="contrasena" required>
+
+                    <div>
+                        <div *ngIf="contrasena.valid">&#x2714;</div>
+                        <div class="red" *ngIf="contrasena.invalid && (contrasena.dirty || contrasena.touched)">&#x2718;</div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="usuario">Usuario</label>
+                    <input type="text" [(ngModel)]="medico.usrname" class="form-control" formControlName="usuario" required>
+
+                    <div>
+                        <div *ngIf="usuario.valid">&#x2714;</div>
+                        <div class="red" *ngIf="usuario.invalid && (usuario.dirty || usuario.touched)">&#x2718;</div>
+                    </div>
+                </div>
+                <br>
+                <button type="submit"  class="btn btn-light">Enviar</button>
+                <button type="button" class="btn btn-dark" (click)="limpiar()">Limpiar</button>
+            </form>
+            <br>
+        </div>
+    </div>
+    <br><br>
+</div>

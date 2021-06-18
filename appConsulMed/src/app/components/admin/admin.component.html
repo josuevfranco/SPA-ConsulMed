@@ -1,0 +1,70 @@
+<div class="container" >
+
+    <br>
+    <h1>Lista de Médicos y Enfermeras</h1>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Especialidad</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Icono</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let medico of ListarMedicos">
+            <th>{{medico.idMed}}</th>
+            <td>{{medico.nombre}}</td>
+            <td>{{medico.apellido}}</td>
+            <td>{{medico.especialidad}}</td>
+            <td>{{medico.usrname}}</td>
+            <td><img src="{{medico.icono}}" alt="" width="50" height="50"> </td>
+            <td>
+                <button (click)="modificar(medico.idMed)" type="button" class="btn btn-info">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminarMedico(medico.idMed)" type="button" class="btn btn-dark">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>
+
+<div class="container">
+    <br>
+    <h1>Lista de Pacientes</h1>
+
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Apellidos</th>
+            <th scope="col">Usuario</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Eliminar</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let paciente of ListarPacientes">
+            <th>{{paciente.idPac}}</th>
+            <td>{{paciente.nombre}}</td>
+            <td>{{paciente.apellido}}</td>
+            <td>{{paciente.usrname}}</td>
+            <td>
+                <button (click)="modificar(paciente.idPac)" type="button" class="btn btn-info">Editar</button>
+            </td>
+            <td>
+                <button (click)="eliminarPaciente(paciente.idPac)" type="button" class="btn btn-dark">Eliminar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

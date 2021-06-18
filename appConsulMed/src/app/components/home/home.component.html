@@ -1,0 +1,350 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="bg">
+  <br><br><br>
+  <div class="card centrom" style="width: 28rem;">
+      <div class="card-body">
+          <h3>Donde quiera que se ama el arte de la medicina, se ama también a la humanidad. (Platón)</h3><br>
+          <h1 class="hola" style="text-align: center; background: rgba(55, 192, 210, 0.7); color: white;"><strong>CENTRO MÉDICO</strong></h1><br>
+          <p>Conoce nuestros servicios de atención médica a distancia, haz tu cita de acuerdo al horario de atención y aprovecha el conocimiento, experiencia y ayuda de nuestros profesionales.</p><br>
+          <div class="botones">
+                <div class="dropdown">
+                    <button class="dropbtn btn btn-info"><i class="fas fa-sign-in-alt"></i>  Inicia Sesión</button>
+                        <div class="dropdown-content">
+                        <a [routerLink]="['/logmed']"><i class="fas fa-user-md"></i>  Médico/Enfermera</a>
+                        <a href="#"><i class="fas fa-id-card-alt"></i>  Paciente</a>
+                    </div>
+                </div>
+              <div class="dropdown">
+                <button class="dropbtn btn btn-info"><i class="fas fa-user-plus"></i>  Regístrate</button>
+                    <div class="dropdown-content">
+                        <a [routerLink]="['/regmed']"><i class="fas fa-user-md"></i>  Médico/Enfermera</a>
+                        <a [routerLink]="['/regpac']"><i class="fas fa-id-card-alt"></i>  Paciente</a>
+                </div>
+            </div>
+          </div>
+      </div>
+  </div>
+  <br><br><br>
+</div>
+
+<section class="servicios">
+  <br>
+  <div>
+      <div>
+          <h2>Servicios Neurológico</h2>
+          <ul>
+              <li>Neurofisiología</li>
+              <li>Neuro-patología</li>
+              <li>Neuroimagen</li>
+              <li>Cirugía de columna</li>
+              <li>Neurorrehabilitación</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Servicios Cardiológico</h2>
+          <ul>
+              <li>Electrocardiograma</li>
+              <li>Holter de presión arterial</li>
+              <li>Holter electrocardiograma</li>
+              <li>Electrocardiografía</li>
+              <li>Inserción de marcapasos</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Servicios Quirúrgicos</h2>
+          <ul>
+              <li>Cirugía bariátrica</li>
+              <li>Cirugía Vascular</li>
+              <li>Cirugía Pediátrica</li>
+              <li>Cirugía Cardiotorácica</li>
+              <li>Cirugía Reconstructiva</li>
+          </ul>
+      </div>
+      <div>
+          <h2>Servicios de Otorrinolaringólogo</h2>
+          <ul>
+              <li>Cirugía sinusal endoscópica</li>
+              <li>Amigdalectomía</li>
+              <li>Broncoscopía</li>
+              <li>Electromiografía</li>
+              <li>Cirugía estética</li>
+          </ul>
+      </div>
+  </div>
+  <br>
+</section>
+
+
+<div>
+  <!--Primera Parte-->
+  <!--Quienes Somos y Horario-->
+  <div class="container-fluid">
+    <br>
+      <div class="row">
+          <div class="col-lg-7">
+            <br>
+              <div class="box">
+                  <h2 class="">Nuestra Clínica</h2>
+                  <p class="parrafo">¿Quiénes somos y qué es lo que hacemos?</p>
+                  <p class="parrafo1">
+                      La Clínica de Aguascalientes somos un hospital católico de tradición y confianza en la ciudad de Aguascalientes, dedicado a preservar la vida a través del espíritu de servicio y calidez humana para la integridad de nuestros pacientes
+                  </p>
+                  <div class="row parrafo2">
+                      <div class="col-lg-1 icon-brain">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="brain" class="svg-inline--fa fa-brain fa-w-18" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path fill="currentColor" d="M208 0c-29.9 0-54.7 20.5-61.8 48.2-.8 0-1.4-.2-2.2-.2-35.3 0-64 28.7-64 64 0 4.8.6 9.5 1.7 14C52.5 138 32 166.6 32 200c0 12.6 3.2 24.3 8.3 34.9C16.3 248.7 0 274.3 0 304c0 33.3 20.4 61.9 49.4 73.9-.9 4.6-1.4 9.3-1.4 14.1 0 39.8 32.2 72 72 72 4.1 0 8.1-.5 12-1.2 9.6 28.5 36.2 49.2 68 49.2 39.8 0 72-32.2 72-72V64c0-35.3-28.7-64-64-64zm368 304c0-29.7-16.3-55.3-40.3-69.1 5.2-10.6 8.3-22.3 8.3-34.9 0-33.4-20.5-62-49.7-74 1-4.5 1.7-9.2 1.7-14 0-35.3-28.7-64-64-64-.8 0-1.5.2-2.2.2C422.7 20.5 397.9 0 368 0c-35.3 0-64 28.6-64 64v376c0 39.8 32.2 72 72 72 31.8 0 58.4-20.7 68-49.2 3.9.7 7.9 1.2 12 1.2 39.8 0 72-32.2 72-72 0-4.8-.5-9.5-1.4-14.1 29-12 49.4-40.6 49.4-73.9z"></path></svg>
+                      </div>
+                      <div class="col-lg-10">
+                        La importancia de cuidar la salud también abarca el aspecto psicológico y las emociones. Tener una actitud positiva ante la vida, entablar relaciones personales sanas, limitar las situaciones de estrés y propiciar el optimismo son prácticas que no podemos perder de vista, ya que nos ayudarán a que nuestra salud mejore.                      </div>
+                  </div>
+                  <div class="row parrafo3">
+                      <div class="col-lg-1 icon-hoscope">
+                          <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="lungs" class="svg-inline--fa fa-lungs fa-w-20" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path fill="currentColor" d="M636.11 390.15C614.44 308.85 580.07 231 534.1 159.13 511.98 124.56 498.03 96 454.05 96 415.36 96 384 125.42 384 161.71v60.11l-32.88-21.92a15.996 15.996 0 0 1-7.12-13.31V16c0-8.84-7.16-16-16-16h-16c-8.84 0-16 7.16-16 16v170.59c0 5.35-2.67 10.34-7.12 13.31L256 221.82v-60.11C256 125.42 224.64 96 185.95 96c-43.98 0-57.93 28.56-80.05 63.13C59.93 231 25.56 308.85 3.89 390.15 1.3 399.84 0 409.79 0 419.78c0 61.23 62.48 105.44 125.24 88.62l59.5-15.95c42.18-11.3 71.26-47.47 71.26-88.62v-87.49l-85.84 57.23a7.992 7.992 0 0 1-11.09-2.22l-8.88-13.31a7.992 7.992 0 0 1 2.22-11.09L320 235.23l167.59 111.72a7.994 7.994 0 0 1 2.22 11.09l-8.88 13.31a7.994 7.994 0 0 1-11.09 2.22L384 316.34v87.49c0 41.15 29.08 77.31 71.26 88.62l59.5 15.95C577.52 525.22 640 481.01 640 419.78c0-9.99-1.3-19.94-3.89-29.63z"></path></svg>
+                      </div>
+                      <div class="col-lg-10">
+                        La salud mental incluye nuestro bienestar emocional, psicológico y social. Afecta la forma en que pensamos, sentimos y actuamos cuando enfrentamos la vida. También ayuda a determinar cómo manejamos el estrés, nos relacionamos con los demás y tomamos decisiones.                      </div>
+
+                  </div>
+
+
+
+              </div>
+          </div>
+      
+          <div class="col-lg-4" id="horarios">
+              <ul class="list-group">
+                  <li class="list-group-item text-center"> <button class="icon-nurse"><svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="user-nurse" class="svg-inline--fa fa-user-nurse fa-w-14" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="currentColor" d="M319.41,320,224,415.39,128.59,320C57.1,323.1,0,381.6,0,453.79A58.21,58.21,0,0,0,58.21,512H389.79A58.21,58.21,0,0,0,448,453.79C448,381.6,390.9,323.1,319.41,320ZM224,304A128,128,0,0,0,352,176V65.82a32,32,0,0,0-20.76-30L246.47,4.07a64,64,0,0,0-44.94,0L116.76,35.86A32,32,0,0,0,96,65.82V176A128,128,0,0,0,224,304ZM184,71.67a5,5,0,0,1,5-5h21.67V45a5,5,0,0,1,5-5h16.66a5,5,0,0,1,5,5V66.67H259a5,5,0,0,1,5,5V88.33a5,5,0,0,1-5,5H237.33V115a5,5,0,0,1-5,5H215.67a5,5,0,0,1-5-5V93.33H189a5,5,0,0,1-5-5ZM144,160H304v16a80,80,0,0,1-160,0Z"></path></svg></button></li>
+                  <li class="list-group-item text-center" id="titulo-horario">Horarios</li>
+                  <li class="list-group-item">Lunes 9:30am - 18:00pm</li>
+                  <li class="list-group-item">Martes 9:30am - 18:00pm</li>
+                  <li class="list-group-item">Miércoles 9:30am - 18:00pm</li>
+                  <li class="list-group-item">Jueves 9:30am - 18:00pm</li>
+                  <li class="list-group-item">Viernes 9:30am - 18:00pm</li>
+                  <li class="list-group-item">Sábado 9:30am - 18:00pm</li>
+                  <li class="list-group-item">Domingo 9:30am - 18:00pm</li>
+              </ul>
+          </div>
+      </div>
+
+      <!--Segunda Parte-->
+      <!--Slider-->
+      <div class="row">
+          <div class="col">
+              <div class="Carousel">
+                  <div class="slick-list" id="slick-list">
+                      <div class="slick-track" id="track">
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic1.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic2.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic3.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic4.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic5.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic6.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic7.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic8.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic9.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic10.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                          <div class="slick">
+                              <div>
+                                  <a href="/">
+                                      <picture>
+                                          <img src="assets/imagenes/clinic11.jpg" alt="Image">
+                                      </picture>
+                                  </a>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+<section class="our-services rotated-bg">
+  <div class="container">
+    <div class="sec-title">
+      <h2 class="center cabecera">Nuestros Servicios Médicos</h2>
+      <p>Recuerda que al elegirnos, estás eligiendo lo mejor para tu salud y para la de tus seres queridos. Contamos con médicos para todas tus necesidades.</p>
+    </div>
+    <div class="row clearfix">
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service-item">
+        
+          <div class="service-left-bg"></div>
+          <div class="service-icon">
+            <img src="https://image.flaticon.com/icons/png/512/432/432068.png" alt="Neurológicos">
+          </div>
+          <div class="service-text">
+            <h4 class="cabecera"><a href="#">Servicio Neurológico</a></h4>
+            <p>Los neurólogos tratan trastornos del sistema nervioso (cerebro, médula espinal y nervios periféricos), trastornos musculares, y dolor, especialmente dolor de cabeza.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service-item">
+        
+          <div class="service-left-bg"></div>
+          <div class="service-icon">
+            <img src="https://image.flaticon.com/icons/png/512/2759/2759056.png" alt="Cardiología">
+          </div>
+          <div class="service-text">
+            <h4 class="cabecera"><a href="#">Servicio Cardiológico</a></h4>
+            <p>Los cardiólogos son médicos que se especializan en el diagnóstico y tratamiento de las enfermedades del corazón y los vasos sanguíneos: el aparato cardiovascular.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service-item">
+        
+          <div class="service-left-bg"></div>
+          <div class="service-icon">
+            <img src="https://image.flaticon.com/icons/png/512/3140/3140343.png" alt="">
+          </div>
+          <div class="service-text">
+            <h4 class="cabecera"><a href="#">Servicio de Farmacia</a></h4>
+            <p>Los Farmacéuticos elaboran y expenden medicamentos prescritos y les brindan asesoría a los clientes y proveedores de salud. La especialización de la oficina de farmacia.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service-item">
+          
+          <div class="service-left-bg"></div>
+          <div class="service-icon">
+            <img src="https://image.flaticon.com/icons/png/512/1364/1364834.png" alt="Quirúrgicos">
+          </div>
+          <div class="service-text">
+            <h4 class="cabecera"><a href="#">Servicios Quirúrgicos</a></h4>
+            <p>Una trayectoria de más de 20 años de establecer relaciones exitosas basadas en valores que promueven el desarrollo humano. Empresa involucrada en el crecimiento de México.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service-item">
+          
+          <div class="service-left-bg"></div>
+          <div class="service-icon">
+            <img src="https://image.flaticon.com/icons/png/512/706/706196.png" alt="X-RAY">
+          </div>
+          <div class="service-text">
+            <h4 class="cabecera"><a href="#">Uso de Rayos X</a></h4>
+            <p>El uso más común de los rayos X es para ver fracturas (huesos rotos), pero también se utilizan para otros usos. Las radiografías de tórax pueden detectar neumonía.</p>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+        <div class="single-service-item">
+          
+          <div class="service-left-bg"></div>
+          <div class="service-icon">
+            <img src="https://image.flaticon.com/icons/png/512/3468/3468244.png" alt="Otorrinólogo">
+          </div>
+          <div class="service-text">
+            <h4 class="cabecera"><a href="#">Servicio de Otorrinólogo</a></h4>
+            <p>Es un médico entrenado en el manejo y tratamiento, tanto médico como quirúrgico, de pacientes con enfermedades y alteraciones del oído, nariz, garganta, cabeza y del cuello.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</body>

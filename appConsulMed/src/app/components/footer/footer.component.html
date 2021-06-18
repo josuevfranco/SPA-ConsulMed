@@ -1,0 +1,41 @@
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@200;600&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css'>
+</head>
+
+<hr style="margin-bottom: 0%; margin-top: 0%; color: black;">
+<div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <p>Inicia Sesión</p>
+                    <ul>
+                        <li><a href="#">Paciente</a></li>
+                        <li><a [routerLink]="['/logAdmin']">Administrador</a></li>
+                        <li><a href="#">Médico</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <p>Regístrate</p>
+                    <ul>
+                        <li><a [routerLink]="['/logmed']">Como Médico</a></li>
+                        <li><a href="#">Como Paciente</a></li>
+                        <li><a href="#">¡Gracias!</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>Doctor Code</h3>
+                    <p>Nos importa tu bienestar!</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i
+                            class="icon ion-social-twitter"></i></a><a href="#"><i
+                            class="icon ion-social-snapchat"></i></a><a href="#"><i
+                            class="icon ion-social-instagram"></i></a></div>
+            </div>
+                <p class="copyright">Doctor Code © 2021</p>
+        </div>
+    </footer>
+</div>
+<hr style="margin-bottom: 0%; margin-top: 0%; color: black;">
