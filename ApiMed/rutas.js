@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const conexion = require('./config/conexion');
+var nodemailer = require('nodemailer');
 
 // Rutas
 
@@ -68,6 +69,33 @@ router.post('/',( req, res)=>{
 //Agregar un Paciente
 router.post('/paciente',( req, res)=>{
     const{nombre,apellido,correo,usrname, contrasena,edad, genero} = req.body
+
+    var transporter = nodemailer.createTransport({
+        service: 'gmail',
+        auth: {
+          user: 'haveyouseenthiswizard39@gmail.com',
+          pass: 'qdecvefeihwikdpu'
+        }
+    });
+
+    var mensaje = "Doctor code te da la bienvenida, registro exitoso, ahora puedes disfrutar de nuestros beneficios, incia sesión con tu usuario y contraseña.";
+
+    var correo2 = correo;
+    var mailOptions = {
+        from: 'haveyouseenthiswizard39@gmail.com',
+        to: correo2,
+        subject: 'Doctor Code te da la bienvenida',
+        text: mensaje
+    };
+
+
+    transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+          console.log(error);
+        } else {
+          console.log('Email enviado: ' + info.response);
+        }
+      });
 
     let sql = `insert into paciente(nombre,apellido,correo,usrname,contrasena,edad,genero) values('${nombre}','${apellido}','${correo}','${usrname}','${contrasena}','${edad}','${genero}')`
     conexion.query(sql, (err, rows, fields)=>{
