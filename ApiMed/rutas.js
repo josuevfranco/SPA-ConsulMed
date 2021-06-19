@@ -66,7 +66,7 @@ router.post('/', (req, res) => {
         }
     });
 
-    var mensaje = "Doctor code te da la bienvenida a ti nuestra red de los mejores médicos y enfermeras de la web, registro exitoso, ahora puedes prestar tus servicios con nosotros, incia sesión con tu usuario y contraseña.";
+    var mensaje = "Doctor code te da la bienvenida a nuestra red de los mejores médicos y enfermeras de la web, registro exitoso, ahora puedes prestar tus servicios con nosotros, incia sesión con tu usuario y contraseña.";
 
     var correo2 = correo;
     var mailOptions = {
