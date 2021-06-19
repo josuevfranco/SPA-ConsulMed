@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
+import { Medico, MedicosService } from './../../servicios/medicos.service';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-logmed',
@@ -7,16 +11,85 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LogmedComponent implements OnInit {
 
-  constructor() { }
+  medico = {
+    usuario: '',
+    contrasena: ''
+  }
 
-  usuario : string = "";
-  contrasena : string = "";
+  medico2: Medico = {
+    usrname: this.medico.usuario,
+    contrasena: this.medico.contrasena
+  }
+
+  loginForm = this.formBuilder.group({
+    usuario: ['', [Validators.required, Validators.minLength(4)]],
+    contrasena: ['']
+  });
+
+  addFriendToSystem(loginForm) {
+    let user: string = loginForm.get('usuario').value;
+    localStorage.setItem("medico", JSON.stringify(user))
+    console.log(user)
+  }
+
+  constructor(private formBuilder: FormBuilder, private MedicosService: MedicosService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
-  verifica(){
-    
+
+  verifica() {
+
+    let existe: boolean = true;
+    existe = this.verificaDatos();
+
+    if (this.loginForm.valid && existe) {
+      this.addFriendToSystem(this.loginForm);
+      this.router.navigate(['/home']);
+    }
+    else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Contraseña Incorrecta',
+        text: 'Intenta de nuevo!'
+      })
+    }
+  }
+
+  //Listar a todos los médicos
+  ListarMedicos: Medico[];
+
+  listarMedicos() {
+    this.MedicosService.getMedicos().subscribe(
+      res => {
+        this.ListarMedicos = <any>res;
+      },
+      err => console.log(err)
+    );
+  }
+
+  //Verifica con los datos ingresados con el registro
+  verificaDatos(): boolean {
+
+    this.listarMedicos();
+    console.log(this.ListarMedicos)
+
+    /*
+    for (let elemento in this.ListarMedicos) {
+      for (let i = 0; i < elemento.length; i++) {
+        if (elemento[i] == this.medico.usuario && elemento[7] == this.medico.contrasena) {
+          return true;
+        }
+      }
+    }*/
+
+    this.ListarMedicos.forEach((usrname: any) => {
+      if (this.medico.usuario == usrname.usrname){
+        return true;
+      }
+    })
+
+    return false;
   }
 
 }

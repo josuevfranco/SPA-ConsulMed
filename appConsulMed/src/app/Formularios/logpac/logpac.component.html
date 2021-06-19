@@ -1,0 +1,14 @@
+<div class="login">
+    <h2 class="login-header">INICIO DE SESIÓN <br> Pacientes
+    </h2>
+  
+    <div class="login-container">
+        <form [formGroup]="loginForm" (submit)="verifica()">
+            <p><input type="text" class="form-control" placeholder="usuario" [formGroup]="loginForm" formControlName="usuario"></p>
+            <p><input type="password" class="form-control" placeholder="contraseña" [formGroup]="loginForm" formControlName="contrasena"></p>
+            <p><button class="log">Iniciar Sesión</button></p>
+        </form>
+    </div>
+  </div>
+  
+  <br><br>

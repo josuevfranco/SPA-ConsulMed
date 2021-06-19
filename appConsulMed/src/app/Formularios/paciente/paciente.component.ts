@@ -77,6 +77,6 @@ export class PacienteComponent implements OnInit {
   //Agregar
   agregarPaciente(){
     this.MedicosService.addPaciente(this.paciente).subscribe();
-    this.router.navigate(['/home']);
+    this.router.navigate(['/logpac']);
   }
 }

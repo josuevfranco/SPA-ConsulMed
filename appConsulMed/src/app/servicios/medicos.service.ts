@@ -51,6 +51,11 @@ export class MedicosService {
     return this.http.delete(this.url+'/pac/'+id);
   }
 
+  //Verifica Inicio de Sesión
+  verificaSesionMed(medico:Medico){
+    
+  }
+
 }
 
 export interface Paciente {

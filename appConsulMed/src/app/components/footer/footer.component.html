@@ -12,16 +12,16 @@
                 <div class="col-sm-6 col-md-3 item">
                     <p>Inicia Sesión</p>
                     <ul>
-                        <li><a href="#">Paciente</a></li>
+                        <li><a [routerLink]="['/logpac']">Paciente</a></li>
                         <li><a [routerLink]="['/logAdmin']">Administrador</a></li>
-                        <li><a href="#">Médico</a></li>
+                        <li><a [routerLink]="['/logmed']">Médico</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-6 col-md-3 item">
                     <p>Regístrate</p>
                     <ul>
-                        <li><a [routerLink]="['/logmed']">Como Médico</a></li>
-                        <li><a href="#">Como Paciente</a></li>
+                        <li><a [routerLink]="['/regmed']">Como Médico</a></li>
+                        <li><a [routerLink]="['/regpac']">Como Paciente</a></li>
                         <li><a href="#">¡Gracias!</a></li>
                     </ul>
                 </div>

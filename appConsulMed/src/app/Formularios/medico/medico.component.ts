@@ -71,7 +71,7 @@ export class MedicoComponent implements OnInit {
   //Agregar
   agregar(){
     this.MedicosService.addMedico(this.medico).subscribe();
-    this.router.navigate(['/home']);
+    this.router.navigate(['/logmed']);
   }
 
 }
