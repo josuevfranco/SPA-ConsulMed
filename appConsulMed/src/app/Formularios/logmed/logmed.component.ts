@@ -72,24 +72,21 @@ export class LogmedComponent implements OnInit {
   verificaDatos(): boolean {
 
     this.listarMedicos();
-    console.log(this.ListarMedicos)
-
-    /*
-    for (let elemento in this.ListarMedicos) {
-      for (let i = 0; i < elemento.length; i++) {
-        if (elemento[i] == this.medico.usuario && elemento[7] == this.medico.contrasena) {
-          return true;
-        }
-      }
-    }*/
-
-    this.ListarMedicos.forEach((usrname: any) => {
-      if (this.medico.usuario == usrname.usrname){
-        return true;
-      }
-    })
-
+    console.log(this.ListarMedicos);
+    
+    
     return false;
   }
 
+}
+
+interface Med {
+  idMed : string;
+  nombre : string;
+  apellido : string;
+  correo : string;
+  especialidad : string;
+  usrname : string;
+  contrasena : string;
+  icono : string;
 }

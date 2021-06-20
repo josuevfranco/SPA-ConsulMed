@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AboutComponent } from './components/about/about.component';
 import { AdminComponent } from './components/admin/admin.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
 import { HomeComponent } from './components/home/home.component';
 import { LogAdminComponent } from './components/log-admin/log-admin.component';
 import { LogmedComponent } from './Formularios/logmed/logmed.component';
@@ -16,6 +18,8 @@ const routes: Routes = [
   { path: 'logmed', component: LogmedComponent },
   { path: 'regmed', component: MedicoComponent},
   { path: 'regpac', component: PacienteComponent },
+  { path: 'contacto', component: ContactoComponent },
+  { path: 'about', component: AboutComponent },
   { path: '**', pathMatch: 'full', redirectTo: 'home' }
 ];
 

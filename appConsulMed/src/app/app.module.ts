@@ -17,6 +17,8 @@ import { LogmedComponent } from './Formularios/logmed/logmed.component';
 import { MedicoComponent } from './Formularios/medico/medico.component';
 import { PacienteComponent } from './Formularios/paciente/paciente.component';
 import { LogpacComponent } from './Formularios/logpac/logpac.component';
+import { ContactoComponent } from './components/contacto/contacto.component';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { LogpacComponent } from './Formularios/logpac/logpac.component';
     LogmedComponent,
     MedicoComponent,
     PacienteComponent,
-    LogpacComponent
+    LogpacComponent,
+    ContactoComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,

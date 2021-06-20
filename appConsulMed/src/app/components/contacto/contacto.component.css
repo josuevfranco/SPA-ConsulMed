@@ -1,0 +1,25 @@
+.header {
+    color: #37c0d2;
+    font-size: 27px;
+    padding: 10px;
+}
+
+.bigicon {
+    font-size: 35px;
+    color: #37c0d2;
+}
+
+.container{
+    margin-left: 20%;
+    margin-right: auto;
+}
+
+.form-group
+{
+    display: flex;
+    flex-direction: row;
+}
+
+button{
+    background: #37c0d2;
+}
