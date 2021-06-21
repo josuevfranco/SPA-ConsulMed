@@ -1,0 +1,30 @@
+.formulario {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.signos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.boton {
+    border: none;
+    padding: 10px;
+    color: white;
+    background: linear-gradient(to right, #37c0d2, #767978);
+    border-radius: 5px;
+    width: 255px;
+    margin: 8px;
+    margin-left: 20px;
+}
+
+.boton:hover {
+    color: #000000;
+}
+
+hr {
+    height: 4px;
+}

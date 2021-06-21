@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { MedicosService } from 'src/app/servicios/medicos.service'; 
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-logpac',
@@ -7,8 +10,6 @@ import { FormBuilder, Validators } from '@angular/forms';
   styleUrls: ['./logpac.component.css']
 })
 export class LogpacComponent implements OnInit {
-
-  medicoOnline = [];
 
   medico = {
     usuario: '',
@@ -26,19 +27,56 @@ export class LogpacComponent implements OnInit {
     console.log(user)
   }
 
-  constructor(private formBuilder: FormBuilder) { }
+  constructor(private formBuilder: FormBuilder, private MedicosService: MedicosService, private router: Router) { }
 
   ngOnInit(): void {
   }
 
+  /////////////////////////////////////////////////////////////////////////////////////
 
-  verifica(){
-    if(this.loginForm.valid){
-    this.addFriendToSystem(this.loginForm);
+  verifica() {
+
+    let existe: boolean = true;
+    existe = this.verificaDatos();
+
+    if (this.loginForm.valid && existe) {
+      this.addFriendToSystem(this.loginForm);
+      this.router.navigate(['/home']);
     }
-    else{
-      console.log("Inválido")
+    else {
+      Swal.fire({
+        icon: 'error',
+        title: 'Contraseña Incorrecta',
+        text: 'Intenta de nuevo!'
+      })
     }
+  }
+
+  //Listar a todos los pacientes
+  ListarPacientes: any;
+
+  listarPacientes() {
+    this.MedicosService.getPacientes().subscribe(
+      res => {
+        this.ListarPacientes = res;
+      },
+      err => console.log(err)
+    );
+  }
+
+  
+  //Verifica con los datos ingresados con el registro
+  verificaDatos(): boolean {
+
+    this.listarPacientes();
+
+    for (let med in this.ListarPacientes){
+      if (med.includes(this.medico.contrasena) && med.includes(this.medico.usuario)){
+        return true;
+      }
+    }
+    
+    return false;
   }
 
 }

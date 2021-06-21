@@ -26,7 +26,7 @@ export class LogAdminComponent implements OnInit {
       Swal.fire({
         icon: 'error',
         title: 'Contraseña Incorrecta',
-        text: 'Intenta de nuevo!'
+        text: '¡Intenta de nuevo!'
       })
     }
 

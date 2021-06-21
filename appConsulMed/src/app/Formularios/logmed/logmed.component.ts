@@ -37,6 +37,7 @@ export class LogmedComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  /////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   verifica() {
 
@@ -57,12 +58,12 @@ export class LogmedComponent implements OnInit {
   }
 
   //Listar a todos los médicos
-  ListarMedicos: Medico[];
+  ListarMedicos: any;
 
   listarMedicos() {
     this.MedicosService.getMedicos().subscribe(
       res => {
-        this.ListarMedicos = <any>res;
+        this.ListarMedicos = res;
       },
       err => console.log(err)
     );
@@ -72,21 +73,15 @@ export class LogmedComponent implements OnInit {
   verificaDatos(): boolean {
 
     this.listarMedicos();
-    console.log(this.ListarMedicos);
-    
+    console.log(this.ListarMedicos)
+
+    for (let med in this.ListarMedicos){
+      if (med.includes(this.medico.contrasena) && med.includes(this.medico.usuario)){
+        return true;
+      }
+    }
     
     return false;
   }
 
-}
-
-interface Med {
-  idMed : string;
-  nombre : string;
-  apellido : string;
-  correo : string;
-  especialidad : string;
-  usrname : string;
-  contrasena : string;
-  icono : string;
 }
