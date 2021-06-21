@@ -26,6 +26,11 @@ export class MedicosService {
     return this.http.get(this.url+'/paciente/'+id);
   }
 
+  //Paciente por usuario
+  getPacienteUsuario(usrname:string){
+    return this.http.get(this.url+'/pacientUser/'+usrname);
+  }
+
   //Agregar un Médico
   addMedico(medico:Medico){
     return this.http.post(this.url, medico);
@@ -51,10 +56,6 @@ export class MedicosService {
     return this.http.delete(this.url+'/pac/'+id);
   }
 
-  //Verifica Inicio de Sesión
-  verificaSesionMed(medico:Medico){
-    
-  }
 
 }
 

@@ -41,7 +41,7 @@ export class LogpacComponent implements OnInit {
 
     if (this.loginForm.valid && existe) {
       this.addFriendToSystem(this.loginForm);
-      this.router.navigate(['/home']);
+      this.router.navigate(['/pacSes']);
     }
     else {
       Swal.fire({

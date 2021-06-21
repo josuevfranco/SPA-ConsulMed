@@ -20,6 +20,7 @@ import { LogpacComponent } from './Formularios/logpac/logpac.component';
 import { ContactoComponent } from './components/contacto/contacto.component';
 import { AboutComponent } from './components/about/about.component';
 import { RegistroPacienteComponent } from './Enfermera/registro-paciente/registro-paciente.component';
+import { PacienteSesionComponent } from './components/paciente-sesion/paciente-sesion.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { RegistroPacienteComponent } from './Enfermera/registro-paciente/registr
     LogpacComponent,
     ContactoComponent,
     AboutComponent,
-    RegistroPacienteComponent
+    RegistroPacienteComponent,
+    PacienteSesionComponent
   ],
   imports: [
     BrowserModule,

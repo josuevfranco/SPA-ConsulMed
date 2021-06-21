@@ -1,0 +1,19 @@
+#msjbienvenida {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: #37c0d2;
+    font-size: 30px;
+    padding-top: 10px;
+}
+
+.table{
+    width: 40%;
+    text-align: center;
+    border: 1px solid black;
+}
+
+.info-pac{
+    display: flex;
+    justify-content: center;
+}

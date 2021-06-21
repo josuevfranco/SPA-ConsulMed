@@ -73,7 +73,6 @@ export class LogmedComponent implements OnInit {
   verificaDatos(): boolean {
 
     this.listarMedicos();
-    console.log(this.ListarMedicos)
 
     for (let med in this.ListarMedicos){
       if (med.includes(this.medico.contrasena) && med.includes(this.medico.usuario)){

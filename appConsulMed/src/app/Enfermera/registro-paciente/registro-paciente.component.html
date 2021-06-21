@@ -1,10 +1,10 @@
 <div class="container">
-    <h1 style="text-align: center; background-color: #37c0d2;">Expediente de paciente</h1>
+    <h1 style="text-align: center;">Expediente de paciente</h1>
     <form [formGroup]="registerForm" (submit)="submit()">
         <div class="formulario">
             <div class="form-group">
                 <h2>Malestar</h2>
-                <textarea cols="40" rows="8" class="form-control" formControlName="malestar"></textarea>
+                <textarea cols="40" rows="8" class="form-control" placeholder="Enfermedad que lo hace venir a consulta" formControlName="malestar"></textarea>
                 <br><br>
                 <hr>
                 <div>

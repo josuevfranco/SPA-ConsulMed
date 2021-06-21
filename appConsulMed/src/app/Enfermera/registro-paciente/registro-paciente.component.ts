@@ -4,7 +4,7 @@ import { MedicosService, Medico, Paciente } from '../../servicios/medicos.servic
 import Swal from 'sweetalert2';
 
 @Component({
-  selector: 'app-registro-paciente',
+  selector: 'app-registro-paciente-enfermera',
   templateUrl: './registro-paciente.component.html',
   styleUrls: ['./registro-paciente.component.css']
 })
